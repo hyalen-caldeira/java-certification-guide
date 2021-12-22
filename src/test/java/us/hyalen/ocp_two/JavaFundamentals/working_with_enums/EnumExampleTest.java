@@ -4,12 +4,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class ExampleTest {
+class EnumExampleTest {
+    EnumExample enumExample;
 
     @BeforeEach
     void setUp() {
+        this.enumExample = new EnumExample();
     }
 
     @Test

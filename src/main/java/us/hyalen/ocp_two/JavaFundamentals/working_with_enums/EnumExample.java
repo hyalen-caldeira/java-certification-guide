@@ -6,10 +6,10 @@ import us.hyalen.ocp_two.JavaFundamentals.working_with_enums.enums.Season;
 
 @Getter
 @Setter
-public class Example {
+public class EnumExample {
     private Season season;
 
-    Example() {
+    EnumExample() {
         season = Season.SPRING;
     }
 
