@@ -1,12 +1,12 @@
 package us.hyalen.patterns.observer;
 
-public class CurrentConditionsDisplay implements Observer, Display {
+public class StatisticObserver implements Observer, Display {
     private float temperature;
     private float humidity;
     private float pressure;
     private WeatherDataSubject subject;
 
-    public CurrentConditionsDisplay(WeatherDataSubject subject) {
+    public StatisticObserver(WeatherDataSubject subject) {
         this.subject = subject;
         subject.registerObserver(this);
     }
@@ -14,11 +14,11 @@ public class CurrentConditionsDisplay implements Observer, Display {
     @Override
     public void display() {
         System.out.println(
-                "Current Conditions: " +
-                temperature + "F Degrees, " +
-                humidity + "% Humidity: " +
-                pressure + " Pressure"
-                );
+                "Statistics: " +
+                        temperature + "F Degrees, " +
+                        humidity + "% Humidity: " +
+                        pressure + " Pressure"
+        );
     }
 
     @Override

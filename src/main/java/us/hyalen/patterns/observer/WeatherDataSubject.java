@@ -29,7 +29,7 @@ public class WeatherDataSubject implements Subject {
             observer.update(temperature, humidity, pressure);
     }
 
-    public void measurementsChanged() {
+    private void measurementsChanged() {
         notifyObservers();
     }
 
