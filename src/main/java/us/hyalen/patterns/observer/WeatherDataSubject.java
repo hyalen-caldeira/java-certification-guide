@@ -14,12 +14,12 @@ public class WeatherDataSubject implements Subject {
     }
 
     @Override
-    public void register(Observer observer) {
+    public void registerObserver(Observer observer) {
         observers.add(observer);
     }
 
     @Override
-    public void remove(Observer observer) {
+    public void removeObserver(Observer observer) {
         observers.remove(observer);
     }
 
