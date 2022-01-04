@@ -3,7 +3,7 @@ package us.hyalen.ocp_two.JavaFundamentals.nested_classes;
 public class Outer {
     private String greeting = "Hi";
 
-    // Could also be public, private or package
+    // Could also be public, private or package (default)
     protected class Inner {
         private int repeat;
         private StringBuilder sb;
