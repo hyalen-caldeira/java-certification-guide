@@ -1,6 +1,7 @@
 package us.hyalen.ocp_two.JavaFundamentals.tdd;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Spy;
 import us.hyalen.tdd.Book;
@@ -32,6 +33,7 @@ public class StockManagementTest {
     }
 
     @Test
+    @DisplayName("Check if Locator is corrected")
     void checkIfLocatorCodeIsCorrect() {
         // Manual stub simulating mock from Mockito
         ExternalISBNDataService webService = isbn -> new Book(isbn, "Of Mice And Men", "J. Steinbeck");
@@ -47,6 +49,7 @@ public class StockManagementTest {
     }
 
     @Test
+    @DisplayName("Database is used if data is present")
     void databaseIsUsedIfDataIsPresent() {
         when(dbService.lookup(VALID_ISBN)).thenReturn(new Book(VALID_ISBN, "Of Mice And Men", "J. Steinbeck"));
 
@@ -60,6 +63,7 @@ public class StockManagementTest {
     }
 
     @Test
+    @DisplayName("Check if webservice is used if data is not present in database")
     void webServiceIsUsedIfDataIsNotPresentInDatabase() {
         when(dbService.lookup(VALID_ISBN)).thenReturn(null);
         when(webService.lookup(VALID_ISBN)).thenReturn(new Book(VALID_ISBN, "Of Mice And Men", "J. Steinbeck"));
@@ -71,6 +75,7 @@ public class StockManagementTest {
     }
 
     @Test
+    @DisplayName("Testing example using Spy")
     void exampleUsingSpy() {
         spyStockManagement = spy(new StockManagement());
         doReturn("Testing spy ...").when(spyStockManagement).getLocatorCode(VALID_ISBN);
