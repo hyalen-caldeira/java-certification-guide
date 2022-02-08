@@ -1,4 +1,4 @@
-package us.hyalen.patterns;
+package us.hyalen.patterns.singleton;
 
 public class Singleton {
     // Uncomment in case you will use the synchronized version
