@@ -15,6 +15,8 @@
 * Observer
 * Singleton
 * Strategy
+* Unit of Work
+* Memento
 
 ### TDD - Test Driven Develop
 * Mock
